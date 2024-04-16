@@ -20,6 +20,10 @@ const vehicles = [
   { type: "EV SUV", range: 30, count: 1 },
 ];
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 app.post("/search", (req, res) => {
   const cops = req.body.cops;
   const fugitiveCityIndex = Math.floor(Math.random() * 5);
